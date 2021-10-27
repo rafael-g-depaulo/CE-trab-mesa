@@ -7,9 +7,8 @@ import networkx as nx
 from territory_agent import TerritoryAgent
 
 class InstituitionModel(Model): 
-  def __init__(self, N, width, height, avgNeighbors=3):
+  def __init__(self, territory_num, avgNeighbors=3):
     self.num_agents = N
-    # self.grid = MultiGrid(width, height, True)
     self.schedule = RandomActivation(self)
     self.running = True
 
@@ -22,8 +21,6 @@ class InstituitionModel(Model):
     for i, node in enumerate(self.G.nodes()):
       a = TerritoryAgent(i, self)
       self.schedule.add(a)
-      # x = self.random.randrange(self.grid.width)
-      # y = self.random.randrange(self.grid.height)
       self.grid.place_agent(a, node)
 
     # create data collector

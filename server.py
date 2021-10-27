@@ -7,9 +7,8 @@ from mesa.visualization.UserParam import UserSettableParameter
 model = InstituitionModel
 
 model_params = {
-  "N": 15,
-  "width": 10,
-  "height": 10
+  "territory_num": 15,
+  "avgNeighbors": 2
 }
 
 model_name = "InstituitionModel"
