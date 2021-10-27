@@ -1,3 +1,3 @@
-from server import mesa_server
+from server import server
 
-mesa_server.launch()
+server.launch()
