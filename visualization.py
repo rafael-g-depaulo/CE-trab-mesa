@@ -23,8 +23,8 @@ def network_portrayal(G):
     {
       "size": 6,
       "color": node_color(agents[0]),
-      "tooltip": "id: {}<br>".format(
-        agents[0].unique_id,
+      "tooltip": "id: {}<br>ppc: {}<br> pop den: {} hab/km²".format(
+        agents[0].unique_id, agents[0].pib_per_capita, agents[0].pop_density
       ),
     }
     for (_, agents) in G.nodes.data("agent")
