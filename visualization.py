@@ -5,7 +5,10 @@ def network_portrayal(G):
   # The model ensures there is always 1 agent per node
 
   def node_color(agent):
-    return "#FF0000"
+    if (agent.color == None):
+      return "#FF0000"
+    else:
+      return agent.color
 
   def edge_color(agent1, agent2):
     return "#000000"
