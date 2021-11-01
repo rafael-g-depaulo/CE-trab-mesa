@@ -26,8 +26,8 @@ def network_portrayal(G):
     {
       "size": 6,
       "color": node_color(agents[0]),
-      "tooltip": "id: {}<br>ppc: {}<br> pop den: {} hab/km²".format(
-        agents[0].unique_id, agents[0].pib_per_capita, agents[0].pop_density
+      "tooltip": "id: {}<br>ppc: {}<br> pop den: {} hab/km²<br>campi: {}<br>campi info: {}<br>".format(
+        agents[0].unique_id, agents[0].pib_per_capita, agents[0].pop_density, len(agents[0].campi), ''.join([f'<br>campus {campus.unique_id}: {campus.scientific_production}' for campus in agents[0].campi])
       ),
     }
     for (_, agents) in G.nodes.data("agent")
@@ -62,8 +62,6 @@ network = NetworkModule(network_portrayal, 500, 500, library="d3")
 chart = ChartModule(
   [
     {"Label": "Infected", "Color": "#FF0000"},
-    {"Label": "Susceptible", "Color": "#008000"},
-    {"Label": "Resistant", "Color": "#808080"},
   ]
 )
 

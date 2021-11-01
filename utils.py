@@ -1,4 +1,5 @@
 import numpy as np
+import random
 
 # Creating a Function.
 def normal_dist(x, mean, sd):

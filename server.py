@@ -50,8 +50,8 @@ model_params = {
   "pib_instituition_weight": UserSettableParameter(
     "slider",
     "PIB per capita weight",
-    0,
     0.04,
+    0,
     1,
     0.005,
     description="how much the pib per capita factors into the probability of a new instituition opening up in a territory",
@@ -60,8 +60,8 @@ model_params = {
   "pop_instituition_weight": UserSettableParameter(
     "slider",
     "population density weight",
-    0,
     0.04,
+    0,
     1,
     0.005,
     description="how much the population density factors into the probability of a new instituition opening up in a territory",
