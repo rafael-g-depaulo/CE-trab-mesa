@@ -7,6 +7,9 @@ import networkx as nx
 from random import random, randint
 
 from territory_agent import TerritoryAgent
+from instituition_agent import InstituitionAgent
+
+large_number = 2 ** 15
 
 class InstituitionModel(Model): 
   def __init__(self, territory_num, avgNeighbors, pib_instituition_weight, pop_instituition_weight, pib_variation, pop_variation):
@@ -18,6 +21,7 @@ class InstituitionModel(Model):
     self.pop_instituition_weight = pop_instituition_weight
     self.pib_variation = pib_variation
     self.pop_variation = pop_variation
+    print(f'self.pib_instituition_weight: {self.pib_instituition_weight} self.pop_instituition_weight: {self.pop_instituition_weight} self.pib_variation: {self.pib_variation} self.pop_variation: {self.pop_variation} self.num_agents {self.num_agents}')
 
     # create grid
     prob = avgNeighbors / territory_num
@@ -42,10 +46,19 @@ class InstituitionModel(Model):
     self.schedule.add(territory)
     self.grid.place_agent(territory, node)
 
+  # NOT FINISHED
   def createInstituition(self, territory):
-    instituition = InstituitionAgent(self.num_agents * 1 + territory.unique_id, self, territory)
+    instituition = InstituitionAgent(large_number + territory.unique_id, self, territory)
     self.schedule.add(instituition)
+    # create first campus of that instituition in that territory
+    self.createCampus(instituition, territory)
+    print(f'self.num_agents {self.num_agents}.  territory.unique_id { territory.unique_id}, {self.num_agents * 1 + territory.unique_id}')
     print(f'created instituition {instituition.unique_id} in territory {territory.unique_id}')
+
+  # NOT FINISHED
+  def createCampus(self, instituition, territory):
+    campus = CampusAgent(large_number + territory.unique_id, self, territory)
+
 
   def step(self):
     self.datacollector.collect(self)
