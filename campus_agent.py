@@ -9,18 +9,15 @@ class CampusAgent(Agent):
   def __init__(self, unique_id, model, territory):
     super().__init__(unique_id, model)
     self.territory = territory
-    self.scientific_production = self.get_initial_prod()
+    self.random_factor = exponential()
+    self.scientific_production = self.get_production()
 
-  def get_initial_prod(self):
+  def get_production(self):
     median_scientific_prod = 100
+    self.random_factor += self.random_factor * 0.05 * random.uniform(-1, 1)
     pib_scale = (self.territory.pib_per_capita / 650000)
-    scientific_prod = exponential() * median_scientific_prod * (1+pib_scale)
+    scientific_prod = self.random_factor * median_scientific_prod * (1+pib_scale)
     return floor(scientific_prod)
 
-  def fluctuate_production(self):
-    if (random.random() < 0.2): self.scientific_production += 1
-    if (random.random() < 0.2): self.scientific_production -= 1
-    if (self.scientific_production < 0): self.scientific_production = 0
-
   def step(self):
-    self.fluctuate_production()
+    self.scientific_production = self.get_production()

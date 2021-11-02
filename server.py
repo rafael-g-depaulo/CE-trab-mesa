@@ -66,8 +66,6 @@ model_params = {
     0.005,
     description="how much the population density factors into the probability of a new instituition opening up in a territory",
   ),
-
-  # instituition creation variance
 }
 
 model_name = "InstituitionModel"

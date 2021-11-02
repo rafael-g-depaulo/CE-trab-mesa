@@ -59,10 +59,16 @@ network = NetworkModule(network_portrayal, 500, 500, library="d3")
 #     )
 
 # Chart
-chart = ChartModule(
+campi_chart = ChartModule(
   [
-    {"Label": "Infected", "Color": "#FF0000"},
+    {"Label": "Campi", "Color": "#00FF00"},
   ]
 )
 
-visualization = [network, chart]
+production_chart = ChartModule(
+  [
+    {"Label": "Production", "Color": "#0000FF"},
+  ]
+)
+
+visualization = [network, campi_chart, production_chart]

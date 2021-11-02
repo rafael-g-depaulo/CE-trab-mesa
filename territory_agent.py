@@ -17,18 +17,13 @@ class TerritoryAgent(Agent):
     self.get_neighbors()
     self.pop_density += self.pop_density * self.pop_variation * uniform(-1, 1)
     self.pib_per_capita += self.pib_per_capita * self.pib_variation * uniform(-1, 1)
-    self.should_create_campus()
+    if (self.should_create_campus()):
+      self.model.createCampus(self)
 
   def should_create_campus(self):
     campus_creation_threshold = 1.0
     should_create_capus = (2 ** (((len(self.campi)**3)+1) / (self.pop_density * self.pib_per_capita))) - uniform(-0.00015, 0.0000015)
-    # print("A: ")
-    # print(should_create_capus)
-    if (should_create_capus < campus_creation_threshold):
-      # print('NEW CAMPUS CREATED')
-      self.model.createCampus(self)
-
+    return should_create_capus < campus_creation_threshold
 
   def get_neighbors(self):
     neighbors_nodes = self.model.grid.get_neighbors(self.pos, include_center=False)
-    # print(f'im agent {self.unique_id} and my neighbors are {neighbors_nodes}')
