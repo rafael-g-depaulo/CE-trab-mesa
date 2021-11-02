@@ -1,3 +1,5 @@
+import csv
+
 from mesa import Model
 from mesa.time import RandomActivation
 from mesa.space import MultiGrid, NetworkGrid
@@ -22,6 +24,9 @@ class InstituitionModel(Model):
     self.pop_instituition_weight = pop_instituition_weight
     self.pib_variation = pib_variation
     self.pop_variation = pop_variation
+
+    self.territories = []
+  
     print(f'self.pib_instituition_weight: {self.pib_instituition_weight} self.pop_instituition_weight: {self.pop_instituition_weight} self.pib_variation: {self.pib_variation} self.pop_variation: {self.pop_variation} self.num_agents {self.num_agents}')
 
     # create grid
@@ -46,17 +51,16 @@ class InstituitionModel(Model):
     territory = TerritoryAgent(id, self, pop_density, pib_per_capita, self.pib_instituition_weight, self.pop_instituition_weight, self.pib_variation, self.pop_variation)
     self.schedule.add(territory)
     self.grid.place_agent(territory, node)
+    self.territories.append(territory)
 
-  # NOT FINISHED
-  # def createInstituition(self, territory):
-  #   instituition = InstituitionAgent(large_number + territory.unique_id, self, territory)
-  #   self.schedule.add(instituition)
-  #   # create first campus of that instituition in that territory
-  #   self.createCampus(instituition, territory)
-    # print(f'self.num_agents {self.num_agents}.  territory.unique_id {territory.unique_id}, {self.num_agents * 1 + territory.unique_id}')
-    # print(f'created instituition {instituition.unique_id} in territory {territory.unique_id}')
+  def exportToCsv(self, filename):
+    with open(filename, 'w', newline='') as myfile:
+      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+      wr.writerow(["id", "pib per capita", "densidade populacional", "producao cientifica"])
+      for territorio in self.territories:
+        prod_scient = sum(map(lambda campus: campus.scientific_production, territorio.campi))
+        wr.writerow([territorio.unique_id, territorio.pib_per_capita, territorio.pop_density, prod_scient])
 
-  # NOT FINISHED
   def createCampus(self, territory):
     campus = CampusAgent(large_number*2 + self.num_agents * len(territory.campi) + territory.unique_id, self, territory)
     territory.color = "#00FF00"
@@ -67,3 +71,4 @@ class InstituitionModel(Model):
   def step(self):
     self.datacollector.collect(self)
     self.schedule.step()
+    self.exportToCsv("./test.csv")
