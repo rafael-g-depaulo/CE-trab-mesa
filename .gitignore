@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 **.csv
+!simulation-results.csv
 
 # C extensions
 *.so
