@@ -46,7 +46,7 @@ Como comentado antes, diversos fatores contribuiram para uma diferença entre os
 
 ## Reflexões pessoais
 
-### Lucas Vinicius
+### Lucas Vinicius (17/0061001)
 Em retrospectiva, as tarefas da disciplina me deram uma base para entender como fazer, para que serve e qual a importância da busca de dados e de artigos, tanto para conhecimento pessoal quanto utilização dos dados para propósitos de criar novos estudos e simulações. Com a matéria eu aprendi a selecionar que tipo de dado eu quero, de acordo com determinada variável como local, assunto, revista de publicação, entre outros. Isso permite com que eu consiga ir atrás de dados que sejam mais relevantes para quaisquer trabalho que eu esteja desenvolvendo, e faz com que quaisquer conclusões que eu extraia desse estudo, seja o mais realista e completa possível.
 
 ### Rafael Golçalves (17/0043959)
