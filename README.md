@@ -53,3 +53,4 @@ Em retrospectiva, as tarefas da disciplina me deram uma base para entender como 
 A quantidade grande de conteúdo novo, com várias metologias e ferramentas com as quais eu nunca trabalhei antes, impactou consideravelmente a minha capacidade de realizar as entregas e engajar com a matéria da forma que gostaria. O que consegui absorver não foi o suficiente para ser satisfatoriamente produtivo nesse semestre. Porém, eu acredito que consegui construir uma base teórica e prática forte o suficiente para conseguir lidar com questões semelhantes no futuro.
 
 ### Leonardo Rodrigues
+O atual projeto permitiu o estudo do framework mesa, além da linguagem python, bem como a modelagem de um caso de estudo real, colocando em prática conceito estudados durante a disciplina de ciência experimental
