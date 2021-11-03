@@ -22,7 +22,7 @@ model_params = {
     "Number of Territories",
     35,
     1,
-    100,
+    200,
     1,
     description="Number of territories",
   ),

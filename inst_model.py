@@ -83,4 +83,4 @@ class InstituitionModel(Model):
   def step(self):
     self.datacollector.collect(self)
     self.schedule.step()
-    self.exportToCsv("./test.csv")
+    self.exportToCsv("./simulation-results.csv")
