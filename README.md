@@ -9,6 +9,8 @@ O nosso código de simulação funciona principalmente, com base em 2 elementos:
 
 A cada _step_, os agentes Território tentam criar um novo campus associado a si. Esse processo leva em conta os campi que já existem naquele território, a sua densidade populacional e o seu PIB per capita. A cada step, os Campi e os Territórios recalculam as suas propriedades, com base nos seus valores anteriores e um fator aleatório.
 
+O código, este texto, os resultados da simulação e os gráficos gerados a partir dos dados se encontram disponíveis [no nosso repositório](https://github.com/rafael-g-depaulo/CE-trab-mesa).
+
 ## Descrição da simulação e dos dados gerados
 
 A construção do código levou em conta dados populacionais e de PIB per capita baseado em valores reais encontrados no brasil. Para a média de PIB per capita, nós usamos como base os dados em [https://pt.tradingeconomics.com/brazil/gdp-per-capita-ppp](https://pt.tradingeconomics.com/brazil/gdp-per-capita-ppp), que mostra que no final de 2020, o Brasil tinha um PIB per capita de aproximadamente 10.500 dólares. E para os dados de densidade populacional, usamos como fonte o site [https://mundoeducacao.uol.com.br/geografia/densidade-demografica-brasil.htm](https://mundoeducacao.uol.com.br/geografia/densidade-demografica-brasil.htm), onde foi encontrado tanto a densidade média, como também um valor de referencial mínimo e um máximo. 
@@ -44,9 +46,10 @@ Como comentado antes, diversos fatores contribuiram para uma diferença entre os
 
 ## Reflexões pessoais
 
-Lucas Vinicius:
+### Lucas Vinicius
 Em retrospectiva, as tarefas da disciplina me deram uma base para entender como fazer, para que serve e qual a importância da busca de dados e de artigos, tanto para conhecimento pessoal quanto utilização dos dados para propósitos de criar novos estudos e simulações. Com a matéria eu aprendi a selecionar que tipo de dado eu quero, de acordo com determinada variável como local, assunto, revista de publicação, entre outros. Isso permite com que eu consiga ir atrás de dados que sejam mais relevantes para quaisquer trabalho que eu esteja desenvolvendo, e faz com que quaisquer conclusões que eu extraia desse estudo, seja o mais realista e completa possível.
 
-Rafael Golçalves: 
+### Rafael Golçalves (17/0043959)
+A quantidade grande de conteúdo novo, com várias metologias e ferramentas com as quais eu nunca trabalhei antes, impactou consideravelmente a minha capacidade de realizar as entregas e engajar com a matéria da forma que gostaria. O que consegui absorver não foi o suficiente para ser satisfatoriamente produtivo nesse semestre. Porém, eu acredito que consegui construir uma base teórica e prática forte o suficiente para conseguir lidar com questões semelhantes no futuro.
 
-Leonardo Rodrigues:
+### Leonardo Rodrigues
