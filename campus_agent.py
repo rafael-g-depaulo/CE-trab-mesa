@@ -14,7 +14,7 @@ class CampusAgent(Agent):
 
   def get_production(self):
     median_scientific_prod = 100
-    neighboring_campi = sum([len(territory.campi) for territory in self.territory.get_neighbors()]) + sum(self.territory.campi) - 1
+    neighboring_campi = sum([len(territory.campi) for territory in self.territory.get_neighbors()]) + len(self.territory.campi) - 1
     neighboring_scale = 0.02 * neighboring_campi
     self.random_factor += self.random_factor * 0.05 * random.uniform(-1, 1)
     pib_scale = (self.territory.pib_per_capita / 650000)

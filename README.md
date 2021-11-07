@@ -15,9 +15,9 @@ O código, este texto, os resultados da simulação e os gráficos gerados a par
 
 A construção do código levou em conta dados populacionais e de PIB per capita baseado em valores reais encontrados no brasil. Para a média de PIB per capita, nós usamos como base os dados em [https://pt.tradingeconomics.com/brazil/gdp-per-capita-ppp](https://pt.tradingeconomics.com/brazil/gdp-per-capita-ppp), que mostra que no final de 2020, o Brasil tinha um PIB per capita de aproximadamente 10.500 dólares. E para os dados de densidade populacional, usamos como fonte o site [https://mundoeducacao.uol.com.br/geografia/densidade-demografica-brasil.htm](https://mundoeducacao.uol.com.br/geografia/densidade-demografica-brasil.htm), onde foi encontrado tanto a densidade média, como também um valor de referencial mínimo e um máximo. 
 
-Com o uso de dados reais para alimentar a lógica do código, esperávamos conseguir uma simulação mais fidedigna possível.
+No cálculo da produção científica e na criação de campi novos dentro dos territórios, campi vizinhos são uma influência positiva.
 
-No final da simulação foi gerado um arquivo .csv, com uma lista das seguintes propriedades de todos os territórios:
+Com o uso de dados reais para alimentar a lógica do código, esperávamos conseguir uma simulação mais fidedigna possível. No final da simulação foi gerado um arquivo .csv, com uma lista das seguintes propriedades de todos os territórios:
 
   1. _id_ único
   2. _PIB per capita_
@@ -52,5 +52,5 @@ Em retrospectiva, as tarefas da disciplina me deram uma base para entender como 
 ### Rafael Golçalves (17/0043959)
 A quantidade grande de conteúdo novo, com várias metologias e ferramentas com as quais eu nunca trabalhei antes, impactou consideravelmente a minha capacidade de realizar as entregas e engajar com a matéria da forma que gostaria. O que consegui absorver não foi o suficiente para ser satisfatoriamente produtivo nesse semestre. Porém, eu acredito que consegui construir uma base teórica e prática forte o suficiente para conseguir lidar com questões semelhantes no futuro.
 
-### Leonardo Rodrigues
+### Leonardo Rodrigues (17/0060543)
 O atual projeto permitiu o estudo do framework mesa, além da linguagem python, bem como a modelagem de um caso de estudo real, colocando em prática conceito estudados durante a disciplina de ciência experimental

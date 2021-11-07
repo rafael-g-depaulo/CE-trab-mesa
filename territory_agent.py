@@ -22,7 +22,11 @@ class TerritoryAgent(Agent):
 
   def should_create_campus(self):
     campus_creation_threshold = 1.0
-    should_create_capus = (2 ** (((len(self.campi)**3)+1) / (self.pop_density * self.pib_per_capita))) - uniform(-0.00015, 0.0000015)
+    # number of campi of neighbors
+    neighboring_campi = sum([len(territory.campi) for territory in self.get_neighbors()])
+    existing_campus_logic = len(self.campi) - 0.05* neighboring_campi
+    should_create_capus = (2 ** (((existing_campus_logic**3)+1) / (self.pop_density * self.pib_per_capita))) - uniform(-0.00015, 0.0000015)
+    # should_create_capus = (2 ** (((len(self.campi)**3)+1) / (self.pop_density * self.pib_per_capita))) - uniform(-0.00015, 0.0000015)
     return should_create_capus < campus_creation_threshold
 
   def get_neighbors(self):
