@@ -27,3 +27,4 @@ class TerritoryAgent(Agent):
 
   def get_neighbors(self):
     neighbors_nodes = self.model.grid.get_neighbors(self.pos, include_center=False)
+    return self.model.grid.get_cell_list_contents(neighbors_nodes)
